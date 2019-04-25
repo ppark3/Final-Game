@@ -1,4 +1,4 @@
-using UnityEngine;
+using UnityEngine; 
 using System.Collections;
 
 
@@ -6,8 +6,8 @@ namespace TMPro.Examples
 {
     public class TextConsoleSimulator : MonoBehaviour
     {
-        private TMP_Text m_TextComponent;
-        private bool hasTextChanged;
+        public TMP_Text m_TextComponent;
+        public bool hasTextChanged;
 
         void Awake()
         {
@@ -30,14 +30,14 @@ namespace TMPro.Examples
 
         void OnDisable()
         {
-            TMPro_EventManager.TEXT_CHANGED_EVENT.Remove(ON_TEXT_CHANGED);
+            //TMPro_EventManager.TEXT_CHANGED_EVENT.Remove(ON_TEXT_CHANGED);
         }
 
 
         // Event received when the text object has changed.
         void ON_TEXT_CHANGED(Object obj)
         {
-            hasTextChanged = true;
+            //hasTextChanged = true;
         }
 
 

@@ -10,6 +10,8 @@ namespace TMPro.Examples
 
         public int SpawnType = 0;
         public int NumberOfNPC = 12;
+        public TMP_FontAsset thing;
+
 
         public Font TheFont;
 
@@ -41,6 +43,8 @@ namespace TMPro.Examples
                     //textMeshPro.FontAsset = Resources.Load("Fonts & Materials/LiberationSans SDF", typeof(TextMeshProFont)) as TextMeshProFont;
                     textMeshPro.alignment = TextAlignmentOptions.Center;
                     textMeshPro.fontSize = 96;
+                    textMeshPro.font = thing;
+
 
                     textMeshPro.text = "@";
                     textMeshPro.color = new Color32(255, 255, 0, 255);

@@ -13,6 +13,7 @@ namespace TMPro.Examples
         public int MinPointSize = 12;
         public int MaxPointSize = 64;
         public int Steps = 4;
+        public TMP_FontAsset thing;
 
         private Transform m_Transform;
         //private TextMeshProFloatingText floatingText_Script;
@@ -43,6 +44,7 @@ namespace TMPro.Examples
                     //textMeshPro.fontSharedMaterial = material;
                     //textMeshPro.font = Resources.Load("Fonts & Materials/LiberationSans SDF", typeof(TextMeshProFont)) as TextMeshProFont;
                     //textMeshPro.anchor = AnchorPositions.Left;
+                    textMeshPro.font = thing;
                     textMeshPro.rectTransform.pivot = new Vector2(0, 0.5f);
 
                     textMeshPro.enableWordWrapping = false;

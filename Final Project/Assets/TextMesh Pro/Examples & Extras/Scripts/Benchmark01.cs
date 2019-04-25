@@ -59,8 +59,8 @@ namespace TMPro.Examples
                 //m_textMeshPro.characterSpacing = 0.2f;
                 //m_textMeshPro.fontColor = new Color32(255, 255, 255, 255);
 
-                m_material01 = m_textMeshPro.font.material;
-                m_material02 = Resources.Load<Material>("Fonts & Materials/LiberationSans SDF - Drop Shadow"); // Make sure the LiberationSans SDF exists before calling this...  
+                //m_material01 = m_textMeshPro.font.material;
+                //m_material02 = Resources.Load<Material>("Fonts & Materials/LiberationSans SDF - Drop Shadow"); // Make sure the LiberationSans SDF exists before calling this...  
 
 
             }
@@ -92,8 +92,8 @@ namespace TMPro.Examples
                 if (BenchmarkType == 0)
                 {
                     m_textMeshPro.SetText(label01, i % 1000);
-                    if (i % 1000 == 999)
-                        m_textMeshPro.fontSharedMaterial = m_textMeshPro.fontSharedMaterial == m_material01 ? m_textMeshPro.fontSharedMaterial = m_material02 : m_textMeshPro.fontSharedMaterial = m_material01;
+                    //if (i % 1000 == 999)
+                       // m_textMeshPro.fontSharedMaterial = m_textMeshPro.fontSharedMaterial == m_material01 ? m_textMeshPro.fontSharedMaterial = m_material02 : m_textMeshPro.fontSharedMaterial = m_material01;
 
 
 
