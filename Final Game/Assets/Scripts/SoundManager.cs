@@ -14,8 +14,11 @@ public class SoundManager : MonoBehaviour
     public AudioClip scream;
     public AudioClip stab;
     public AudioClip select;
+    public AudioClip gong;
 
     public bool firstChoice = true;
+    public bool secondChoice = true;
+    public bool thirdChoice = true;
 
     public AudioSource audioSource;
 
@@ -38,6 +41,63 @@ public class SoundManager : MonoBehaviour
             audioSource.clip = select;
             audioSource.Play();
             firstChoice = false;
+        }
+        if (GameManager.gameScene == 4 && GameManager.screwYou)
+        {
+            audioSource.clip = gong;
+            audioSource.Play();
+            GameManager.screwYou = false;
+        }
+        if (GameManager.gameScene == 6 && GameManager.creakyFloor)
+        {
+            audioSource.Stop();
+            audioSource.clip = creakingFloor;
+            audioSource.Play();
+            GameManager.creakyFloor = false;
+        }
+        if (GameManager.gameScene == 6 && GameManager.hey)
+        {
+            audioSource.Stop();
+            audioSource.clip = select;
+            audioSource.Play();
+            GameManager.hey = false;
+        }
+        if (GameManager.secondChoice != 0 && secondChoice)
+        {
+            audioSource.clip = select;
+            audioSource.Play();
+            secondChoice = false;
+        }
+        if (GameManager.gameScene == 8 && GameManager.fuckYou)
+        {
+            audioSource.clip = gong;
+            audioSource.Play();
+            GameManager.fuckYou = false;
+        }
+        if (GameManager.gameScene == 10 && GameManager.crackFloor)
+        {
+            audioSource.clip = floorBreaking;
+            audioSource.Play();
+            GameManager.crackFloor = false;
+        }
+        if (GameManager.thirdChoice != 0 && thirdChoice)
+        {
+            audioSource.clip = select;
+            audioSource.Play();
+            thirdChoice = false;
+        }
+        if (GameManager.gameScene == 14 && GameManager.fadeFootsteps)
+        {
+            audioSource.Stop();
+            audioSource.clip = fadeOutRunning;
+            audioSource.Play();
+            GameManager.fadeFootsteps = false;
+        }
+        if (GameManager.gameScene == 12 && GameManager.fuckYou2)
+        {
+            audioSource.clip = gong;
+            audioSource.Play();
+            GameManager.fuckYou2 = false;
         }
     }
 }

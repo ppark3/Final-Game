@@ -12,6 +12,8 @@ public class FadeInText : MonoBehaviour
     public Color fadeInColor;
     public Color fadeOutColor;
 
+    public Coroutine theCoroutine;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +29,7 @@ public class FadeInText : MonoBehaviour
     void OnEnable()
     {
         m_TextComponent = gameObject.GetComponent<TMP_Text>();
-        StartCoroutine(FadeIn(m_TextComponent));
+        theCoroutine = StartCoroutine(FadeIn(m_TextComponent));
     }
 
     public IEnumerator FadeIn(TMP_Text textComponent)
@@ -44,9 +46,9 @@ public class FadeInText : MonoBehaviour
         }
     }
 
-    void Stop()
+    public void Stop()
     {
-        StopCoroutine(FadeIn(m_TextComponent));
+        StopCoroutine(theCoroutine);
         m_TextComponent.color = fadeInColor;
         displayed = true;
     }

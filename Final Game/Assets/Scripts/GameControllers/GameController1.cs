@@ -52,7 +52,7 @@ public class GameController1 : MonoBehaviour
         if (phase == 1 && two.GetComponent<ScrollText>().displayed)
         {
             assistTimer += Time.deltaTime;
-            if (assistTimer > 1f)
+            if (assistTimer > 0.5f)
             {
                 two5.gameObject.SetActive(true);
                 assistTimer = 0.0f;
@@ -73,10 +73,10 @@ public class GameController1 : MonoBehaviour
         {
             three.GetComponent<ScrollText>().cancelTyping = true;
         }
-        if (phase == 2 && two.GetComponent<ScrollText>().displayed)
+        if (phase == 2 && three.GetComponent<ScrollText>().displayed)
         {
             assistTimer += Time.deltaTime;
-            if (assistTimer > 1f)
+            if (assistTimer > 0.5f )
             {
                 three5.gameObject.SetActive(true);
                 assistTimer = 0.0f;

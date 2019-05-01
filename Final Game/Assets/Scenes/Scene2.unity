@@ -124,8 +124,8 @@ GameObject:
   - component: {fileID: 321052572}
   - component: {fileID: 321052571}
   - component: {fileID: 321052573}
-  - component: {fileID: 321052574}
   - component: {fileID: 321052575}
+  - component: {fileID: 321052574}
   m_Layer: 5
   m_Name: GoodResponse
   m_TagString: Untagged
@@ -311,7 +311,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 321052569}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cf79ee5689f74c34ab77d426a7ae72c, type: 3}
+  m_Script: {fileID: 11500000, guid: 376886fc04c1142a78d296f090d52bcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   selected: {r: 1, g: 1, b: 1, a: 1}
@@ -480,7 +480,7 @@ MonoBehaviour:
   decisionTime: 0
   assistTimer: 0
   one: {fileID: 1730835554}
-  one5: {fileID: 1681091759}
+  two: {fileID: 1681091759}
 --- !u!4 &757559458
 Transform:
   m_ObjectHideFlags: 0
@@ -729,8 +729,8 @@ GameObject:
   - component: {fileID: 1316027050}
   - component: {fileID: 1316027049}
   - component: {fileID: 1316027051}
-  - component: {fileID: 1316027052}
   - component: {fileID: 1316027053}
+  - component: {fileID: 1316027052}
   m_Layer: 5
   m_Name: BadResponse
   m_TagString: Untagged
@@ -916,7 +916,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1316027047}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cc2670b859344b28961ba4679ccf525, type: 3}
+  m_Script: {fileID: 11500000, guid: 376886fc04c1142a78d296f090d52bcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   selected: {r: 1, g: 1, b: 1, a: 1}
@@ -1177,7 +1177,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1681091758
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1217,9 +1217,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: '"We''ve got some crappy luck...
-
-    getting lost in a place like <size=70>THIS</size>."'
+  m_text: getting lost in a place like <size=70>THIS</size>."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 02792a24a87984214bcdf32359ab4167, type: 2}
   m_sharedMaterial: {fileID: 21638925138401192, guid: 02792a24a87984214bcdf32359ab4167,
@@ -1283,16 +1281,16 @@ MonoBehaviour:
   m_verticalMapping: 0
   m_uvLineOffset: 0
   m_geometrySortingOrder: 0
-  m_firstVisibleCharacter: 31
+  m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
   m_margin: {x: 0, y: -19.274042, z: -603.7445, w: -2.7685158}
   m_textInfo:
     textComponent: {fileID: 1681091759}
-    characterCount: 66
+    characterCount: 35
     spriteCount: 0
     spaceCount: 6
-    wordCount: 8
+    wordCount: 7
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -1302,7 +1300,7 @@ MonoBehaviour:
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
   m_isInputParsingRequired: 0
-  m_inputSource: 3
+  m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
   - {fileID: 0}
@@ -1357,7 +1355,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1730835553
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1397,9 +1395,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: '"We''ve got some crappy luck...
-
-    getting lost in a place like <size=70>THIS</size>."'
+  m_text: '"We''ve got some crappy luck...'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 02792a24a87984214bcdf32359ab4167, type: 2}
   m_sharedMaterial: {fileID: 21638925138401192, guid: 02792a24a87984214bcdf32359ab4167,
@@ -1445,11 +1441,11 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 6
+  m_overflowMode: 0
   m_firstOverflowCharacterIndex: -1
-  m_linkedTextComponent: {fileID: 1681091759}
+  m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
-  m_isTextTruncated: 1
+  m_isTextTruncated: 0
   m_enableKerning: 1
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
@@ -1469,9 +1465,9 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -580.497, w: -2.7334223}
   m_textInfo:
     textComponent: {fileID: 1730835554}
-    characterCount: 31
+    characterCount: 30
     spriteCount: 0
-    spaceCount: 5
+    spaceCount: 4
     wordCount: 5
     linkCount: 0
     lineCount: 1
