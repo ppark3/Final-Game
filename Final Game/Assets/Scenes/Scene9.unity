@@ -542,7 +542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cc38948a15fb46a7b65916319d62dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameController: {fileID: 0}
+  gameController: {fileID: 188272528}
   landed: 0
 --- !u!114 &949471575
 MonoBehaviour:
