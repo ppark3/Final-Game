@@ -27,6 +27,16 @@ public class MusicManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (GameManager.stopMusic)
+        {
+            audioSource.Stop();
+            GameManager.stopMusic = false;
+        }
+        if (GameManager.playSecondSong)
+        {
+            audioSource.clip = secondSong;
+            audioSource.Play();
+            GameManager.playSecondSong = false;
+        }
     }
 }

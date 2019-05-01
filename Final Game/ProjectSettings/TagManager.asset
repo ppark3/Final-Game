@@ -7,6 +7,10 @@ TagManager:
   - Cursor
   - GoodChoice
   - BadChoice
+  - Top
+  - Bottom
+  - Left
+  - Right
   layers:
   - Default
   - TransparentFX

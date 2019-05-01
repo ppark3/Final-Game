@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public static int firstChoice = 0;
     public static int secondChoice = 0;
     public static int thirdChoice = 0;
+    public static int fourthChoice = 0;
 
     public static bool screwYou = false;
     public static bool creakyFloor = false;
@@ -17,6 +18,10 @@ public class GameManager : MonoBehaviour
     public static bool crackFloor = false;
     public static bool fadeFootsteps = false;
     public static bool fuckYou2 = false;
+    public static bool scream = false;
+
+    public static bool stopMusic = false;
+    public static bool playSecondSong = false;
 
     // Start is called before the first frame update
     void Start()
@@ -69,6 +74,19 @@ public class GameManager : MonoBehaviour
         if (gameScene == 10 && thirdChoice == 3)
         {
             gameScene = 13;
+        }
+
+        if (gameScene == 14 && fourthChoice == 1)
+        {
+            gameScene = 15;
+        }
+        if (gameScene == 14 && fourthChoice == 2)
+        {
+            gameScene = 16;
+        }
+        if (gameScene == 14 && fourthChoice == 3)
+        {
+            gameScene = 17;
         }
     }
 }

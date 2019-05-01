@@ -99,5 +99,11 @@ public class SoundManager : MonoBehaviour
             audioSource.Play();
             GameManager.fuckYou2 = false;
         }
+        if (GameManager.gameScene == 14 && GameManager.scream)
+        {
+            audioSource.clip = scream;
+            audioSource.Play();
+            GameManager.scream = false;
+        }
     }
 }
