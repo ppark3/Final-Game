@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public static int thirdChoice = 0;
     public static int fourthChoice = 0;
     public static int fifthChoice = 0;
+    public static int sixthChoice = 0;
 
     public static bool screwYou = false;
     public static bool creakyFloor = false;
@@ -105,6 +106,19 @@ public class GameManager : MonoBehaviour
         if (gameScene == 18 && fifthChoice == 3)
         {
             gameScene = 21;
+        }
+
+        if (gameScene == 22 && sixthChoice == 1)
+        {
+            gameScene = 23;
+        }
+        if (gameScene == 22 && sixthChoice == 2)
+        {
+            gameScene = 24;
+        }
+        if (gameScene == 22 && sixthChoice == 3)
+        {
+            gameScene = 25;
         }
     }
 }

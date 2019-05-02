@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class ChoiceBehavior : MonoBehaviour
 {
+    public bool isRun = false;
+
     public Color selected;
     public Color unselected;
     public TMP_Text m_TextComponent;

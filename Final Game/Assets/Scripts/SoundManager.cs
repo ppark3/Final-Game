@@ -21,6 +21,7 @@ public class SoundManager : MonoBehaviour
     public bool thirdChoice = true;
     public bool fourthChoice = true;
     public bool fifthChoice = true;
+    public bool sixthChoice = true;
 
     public AudioSource audioSource;
 
@@ -145,6 +146,11 @@ public class SoundManager : MonoBehaviour
             audioSource.Stop();
             GameManager.stopWalking = false;
         }
-
+        if (GameManager.sixthChoice != 0 && sixthChoice)
+        {
+            audioSource.clip = select;
+            audioSource.Play();
+            sixthChoice = false;
+        }
     }
 }
