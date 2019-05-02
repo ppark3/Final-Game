@@ -19,6 +19,8 @@ public class SoundManager : MonoBehaviour
     public bool firstChoice = true;
     public bool secondChoice = true;
     public bool thirdChoice = true;
+    public bool fourthChoice = true;
+    public bool fifthChoice = true;
 
     public AudioSource audioSource;
 
@@ -86,6 +88,18 @@ public class SoundManager : MonoBehaviour
             audioSource.Play();
             thirdChoice = false;
         }
+        if (GameManager.fourthChoice != 0 && fourthChoice)
+        {
+            audioSource.clip = select;
+            audioSource.Play();
+            fourthChoice = false;
+        }
+        if (GameManager.fifthChoice != 0 && fifthChoice)
+        {
+            audioSource.clip = select;
+            audioSource.Play();
+            fifthChoice = false;
+        }
         if (GameManager.gameScene == 14 && GameManager.fadeFootsteps)
         {
             audioSource.Stop();
@@ -105,5 +119,32 @@ public class SoundManager : MonoBehaviour
             audioSource.Play();
             GameManager.scream = false;
         }
+        if (GameManager.gameScene == 18 && GameManager.footsteps)
+        {
+            audioSource.Stop();
+            audioSource.clip = lightWalking;
+            audioSource.Play();
+            GameManager.footsteps = false;
+        }
+        if (GameManager.gameScene == 18 && GameManager.suddenly)
+        {
+            audioSource.Stop();
+            audioSource.clip = select;
+            audioSource.Play();
+            GameManager.suddenly = false;
+        }
+        if (GameManager.gameScene == 22 && GameManager.walkTowards)
+        {
+            audioSource.Stop();
+            audioSource.clip = lightWalking;
+            audioSource.Play();
+            GameManager.walkTowards = false;
+        }
+        if (GameManager.gameScene == 22 && GameManager.stopWalking)
+        {
+            audioSource.Stop();
+            GameManager.stopWalking = false;
+        }
+
     }
 }

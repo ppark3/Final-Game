@@ -38,5 +38,11 @@ public class MusicManager : MonoBehaviour
             audioSource.Play();
             GameManager.playSecondSong = false;
         }
+        if (GameManager.playThirdSong)
+        {
+            audioSource.clip = climaxSong;
+            audioSource.Play();
+            GameManager.playThirdSong = false;
+        }
     }
 }

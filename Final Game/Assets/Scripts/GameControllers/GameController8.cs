@@ -47,7 +47,7 @@ public class GameController8 : MonoBehaviour
     {
         phase = 0;
         totalTimerTime = 8;
-        GameManager.gameScene = 14;
+        //GameManager.gameScene = 14;
     }
 
     // Update is called once per frame

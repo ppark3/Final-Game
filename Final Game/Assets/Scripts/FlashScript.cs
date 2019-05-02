@@ -29,7 +29,7 @@ public class FlashScript : MonoBehaviour
 
     public IEnumerator Flash()
     {
-        fadeTime = 0.2f;
+        fadeTime = 0.1f;
         for (float t = 0.0f; t < fadeTime; t += Time.deltaTime)
         {
             sr.color = Color.Lerp(fadeOutColor, fadeInColor, Mathf.Min(1, t / fadeTime));

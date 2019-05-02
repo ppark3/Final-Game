@@ -52,7 +52,7 @@ public class ScrollText : MonoBehaviour
 
             visibleCount += 1;
 
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.02f);
         }
         textComponent.maxVisibleCharacters = totalVisibleCharacters;
         displayed = true;
