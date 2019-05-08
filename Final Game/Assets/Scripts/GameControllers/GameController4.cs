@@ -87,7 +87,7 @@ public class GameController4 : MonoBehaviour
             four.GetComponent<ScrollText>().cancelTyping = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && phase == 4)
+        if (Input.GetKeyDown(KeyCode.Space) && phase == 4 && !five.GetComponent<ScrollText>().isTyping)
         {
             phase = 5;
         }
@@ -95,12 +95,12 @@ public class GameController4 : MonoBehaviour
         {
             four.gameObject.SetActive(false);
             phase = 4;
-            GameManager.hey = true;
+            //GameManager.hey = true;
         }
         if (phase == 4)
         {
             five.gameObject.SetActive(true);
-            hey.gameObject.SetActive(true);
+            //hey.gameObject.SetActive(true);
         }
         if (phase == 5)
         {

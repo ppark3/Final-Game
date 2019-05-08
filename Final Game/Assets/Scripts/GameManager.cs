@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public static int fourthChoice = 0;
     public static int fifthChoice = 0;
     public static int sixthChoice = 0;
+    public static int seventhChoice = 0;
 
     public static bool screwYou = false;
     public static bool creakyFloor = false;
@@ -25,10 +26,12 @@ public class GameManager : MonoBehaviour
     public static bool suddenly = false;
     public static bool walkTowards = false;
     public static bool stopWalking = false;
+    public static bool stab = false;
 
     public static bool stopMusic = false;
     public static bool playSecondSong = false;
     public static bool playThirdSong = false;
+    public static bool playGameOverSong = false;
 
     // Start is called before the first frame update
     void Start()

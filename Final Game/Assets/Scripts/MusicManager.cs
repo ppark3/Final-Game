@@ -12,9 +12,15 @@ public class MusicManager : MonoBehaviour
 
     public AudioSource audioSource;
 
+    public Coroutine stopMusic;
+    public Coroutine stopMusic2;
+
+    public float startVolume;
+
     // Start is called before the first frame update
     void Start()
     {
+        startVolume = audioSource.volume;
         audioSource.clip = firstSong;
         audioSource.Play();
     }
@@ -29,20 +35,71 @@ public class MusicManager : MonoBehaviour
     {
         if (GameManager.stopMusic)
         {
-            audioSource.Stop();
-            GameManager.stopMusic = false;
+            if (GameManager.gameScene == 14)
+            {
+                GameManager.stopMusic = false;
+                stopMusic = StartCoroutine(FadeOut(audioSource, 0.1f));
+            }
+            else if (GameManager.gameScene == 22)
+            {
+                GameManager.stopMusic = false;
+                stopMusic2 = StartCoroutine(FadeOut(audioSource, 0.1f));
+            }
         }
         if (GameManager.playSecondSong)
         {
+            StopCoroutine(stopMusic);
+            audioSource.Stop();
+            audioSource.volume = startVolume;
             audioSource.clip = secondSong;
             audioSource.Play();
             GameManager.playSecondSong = false;
         }
         if (GameManager.playThirdSong)
         {
+            StopCoroutine(stopMusic2);
+            audioSource.Stop();
+            audioSource.volume = startVolume;
             audioSource.clip = climaxSong;
             audioSource.Play();
             GameManager.playThirdSong = false;
         }
+        if (GameManager.playGameOverSong)
+        {
+            StartCoroutine(GameOver(audioSource, 1f));
+            GameManager.playGameOverSong = false;
+        }
+    }
+
+    public IEnumerator FadeOut(AudioSource audioSource, float FadeTime)
+    {
+        float start = audioSource.volume;
+
+        while (audioSource.volume > 0)
+        {
+            audioSource.volume -= start * Time.deltaTime / FadeTime;
+
+            yield return null;
+        }
+
+        audioSource.Stop();
+        audioSource.volume = start;
+    }
+
+    public IEnumerator GameOver(AudioSource audioSource, float FadeTime)
+    {
+        float start = audioSource.volume;
+
+        while (audioSource.volume > 0)
+        {
+            audioSource.volume -= start * Time.deltaTime / FadeTime;
+
+            yield return null;
+        }
+
+        audioSource.Stop();
+        audioSource.volume = start; 
+        audioSource.clip = gameOver;
+        audioSource.Play();
     }
 }

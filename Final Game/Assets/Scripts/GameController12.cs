@@ -8,7 +8,6 @@ using UnityEngine.UI;
 public class GameController12 : MonoBehaviour
 {
     public int phase;
-    public float assistTimer;
 
     public GameObject cursor;
     public Slider timer;
@@ -23,6 +22,7 @@ public class GameController12 : MonoBehaviour
 
     public int totalTimerTime;
     public bool decisionTime;
+    public bool stoppedMusic;
 
     public TMP_Text one;
     public TMP_Text two;
@@ -32,12 +32,16 @@ public class GameController12 : MonoBehaviour
     public TMP_Text six;
     public TMP_Text seven;
     public TMP_Text eight;
+    public TMP_Text nine;
+    public TMP_Text ten;
+    public TMP_Text eleven;
 
     // Start is called before the first frame update
     void Start()
     {
         totalTimerTime = 8;
         triedRunning = false;
+        GameManager.gameScene = 22;
     }
 
     // Update is called once per frame
@@ -87,7 +91,11 @@ public class GameController12 : MonoBehaviour
         }
         if (phase == 5)
         {
-            GameManager.stopMusic = true;
+            if (!stoppedMusic)
+            {
+                GameManager.stopMusic = true;
+                stoppedMusic = true;
+            }
             four.gameObject.SetActive(false);
             five.gameObject.SetActive(true);
             five.GetComponent<FadeInText>().displayed = true;
@@ -118,6 +126,7 @@ public class GameController12 : MonoBehaviour
         }
         if (phase == 9)
         {
+            seven.gameObject.SetActive(true);
             cursor.SetActive(true);
             goodResponse.SetActive(true);
             badRepsonse.SetActive(true);
@@ -135,47 +144,50 @@ public class GameController12 : MonoBehaviour
         }
         if (phase == 10 && decisionTime)
         {
+
+            if (Input.GetKey(KeyCode.Space) && runResponse1.GetComponent<ChoiceBehavior>().selectedBool && !triedRunning)
+            {
+                runResponse1.gameObject.SetActive(false);
+                runResponse2.gameObject.SetActive(true);
+            }
+            if (Input.GetKey(KeyCode.Space) && runResponse2.GetComponent<ChoiceBehavior>().selectedBool && !triedRunning)
+            {
+                runResponse2.gameObject.SetActive(false);
+                runResponse3.gameObject.SetActive(true);
+            }
             if (Input.GetKey(KeyCode.Space) && goodResponse.GetComponent<ChoiceBehavior>().selectedBool)
             {
                 timer.gameObject.SetActive(false);
                 seven.gameObject.SetActive(false);
-                StopCoroutine(RunTimer());
+                StopCoroutine(runningHelp);
                 GameManager.sixthChoice = 1;
                 goodResponse.SetActive(false);
                 badRepsonse.SetActive(false);
                 runResponse1.SetActive(false);
                 runResponse2.SetActive(false);
                 runResponse3.SetActive(false);
+                runResponse4.SetActive(false);
                 cursor.SetActive(false);
                 decisionTime = false;
-                phase = 11;
+                phase = 13;
             }
             if (Input.GetKey(KeyCode.Space) && badRepsonse.GetComponent<ChoiceBehavior>().selectedBool)
             {
                 timer.gameObject.SetActive(false);
                 seven.gameObject.SetActive(false);
-                StopCoroutine(RunTimer());
+                StopCoroutine(runningHelp);
                 GameManager.sixthChoice = 2;
                 goodResponse.SetActive(false);
                 badRepsonse.SetActive(false);
                 runResponse1.SetActive(false);
                 runResponse2.SetActive(false);
                 runResponse3.SetActive(false);
+                runResponse4.SetActive(false);
                 cursor.SetActive(false);
                 decisionTime = false;
-                phase = 11;
+                phase = 12;
             }
-            if (Input.GetKey(KeyCode.Space) && runResponse1.GetComponent<ChoiceBehavior>().selectedBool)
-            {
-                runResponse1.gameObject.SetActive(false);
-                runResponse2.gameObject.SetActive(true);
-            }
-            if (Input.GetKey(KeyCode.Space) && runResponse2.GetComponent<ChoiceBehavior>().selectedBool)
-            {
-                runResponse2.gameObject.SetActive(false);
-                runResponse3.gameObject.SetActive(true);
-            }
-            if (Input.GetKey(KeyCode.Space) && runResponse3.GetComponent<ChoiceBehavior>().selectedBool)
+            if (Input.GetKey(KeyCode.Space) && runResponse3.GetComponent<ChoiceBehavior>().selectedBool && !triedRunning)
             {
                 timer.gameObject.SetActive(false);
                 seven.gameObject.SetActive(false);
@@ -193,12 +205,51 @@ public class GameController12 : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space) && phase == -10 && !eight.GetComponent<SlowScroll>().isTyping)
         {
+            eight.gameObject.SetActive(false);
             phase = 9;
             GameManager.playThirdSong = true;
         }
         if (phase == 11)
         {
+            GameManager.gameScene = 23;
             SceneManager.LoadScene("Scene13");
+        }
+        if (phase == 12)
+        {
+            nine.gameObject.SetActive(true);
+        }
+        if (Input.GetKeyDown(KeyCode.Space) && phase == 12 && nine.GetComponent<ScrollText>().isTyping)
+        {
+            nine.GetComponent<ScrollText>().cancelTyping = true;
+        }
+        if (Input.GetKeyDown(KeyCode.Space) && phase == 12 && !nine.GetComponent<ScrollText>().isTyping)
+        {
+            GameManager.gameScene = -1;
+            SceneManager.LoadScene("GameOver");
+        }
+        if (phase == 13)
+        {
+            ten.gameObject.SetActive(true);
+        }
+        if (Input.GetKeyDown(KeyCode.Space) && phase == 13 && ten.GetComponent<ScrollText>().isTyping)
+        {
+            ten.GetComponent<ScrollText>().cancelTyping = true;
+        }
+        if (Input.GetKeyDown(KeyCode.Space) && phase == 13 && !ten.GetComponent<ScrollText>().isTyping)
+        {
+            phase = 11;
+        }
+        if (phase == 14)
+        {
+            eleven.gameObject.SetActive(true);
+        }
+        if (Input.GetKeyDown(KeyCode.Space) && phase == 14 && eleven.GetComponent<ScrollText>().isTyping)
+        {
+            eleven.GetComponent<ScrollText>().cancelTyping = true;
+        }
+        if (Input.GetKeyDown(KeyCode.Space) && phase == 14 && !eleven.GetComponent<ScrollText>().isTyping)
+        {
+            phase = 11;
         }
     }
 
@@ -221,6 +272,6 @@ public class GameController12 : MonoBehaviour
         runResponse3.SetActive(false);
         cursor.SetActive(false);
         decisionTime = false;
-        phase = 11;
+        phase = 14;
     }
 }

@@ -553,7 +553,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: You see a <#F6B2E8>beautiful</color> woman in <b>white</b> appear from around
+  m_text: You see a <#F6B2E8>beautiful woman</color> in <b>white</b> appear from around
     a corner.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 02792a24a87984214bcdf32359ab4167, type: 2}
@@ -636,7 +636,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -2860,6 +2860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376886fc04c1142a78d296f090d52bcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isRun: 0
   selected: {r: 1, g: 1, b: 1, a: 1}
   unselected: {r: 0.4745098, g: 0.4745098, b: 0.4745098, a: 1}
   m_TextComponent: {fileID: 0}
@@ -3268,6 +3269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376886fc04c1142a78d296f090d52bcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isRun: 0
   selected: {r: 1, g: 1, b: 1, a: 1}
   unselected: {r: 0.4745098, g: 0.4745098, b: 0.4745098, a: 1}
   m_TextComponent: {fileID: 0}

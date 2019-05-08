@@ -51,8 +51,18 @@ public class SlowScroll : MonoBehaviour
             textComponent.maxVisibleCharacters = visibleCount; // How many characters should TextMeshPro display?
 
             visibleCount += 1;
-
-            yield return new WaitForSeconds(0.1f);
+            if (GameManager.gameScene == -1)
+            {
+                yield return new WaitForSeconds(0.5f);
+            }
+            else if (GameManager.gameScene != 23)
+            {
+                yield return new WaitForSeconds(0.1f);
+            }
+            else
+            {
+                yield return new WaitForSeconds(0.11f);
+            }
         }
         textComponent.maxVisibleCharacters = totalVisibleCharacters;
         displayed = true;

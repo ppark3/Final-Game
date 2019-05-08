@@ -27,7 +27,7 @@ public class ChoiceBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.gameScene == 14)
+        if (GameManager.gameScene == 14 || GameManager.gameScene == 23)
         {
             gameObject.transform.Translate(Vector3.left * horizontalSpeed * Time.deltaTime);
             gameObject.transform.Translate(Vector3.up * verticalSpeed * Time.deltaTime);

@@ -101,7 +101,6 @@ public class GameController10 : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space) && phase == 6 && !five.GetComponent<ScrollText>().isTyping)
         {
-            GameManager.footsteps = true;
             phase = 7;
         }
         if (phase == -1 && Input.GetKeyDown(KeyCode.Space))
@@ -120,7 +119,8 @@ public class GameController10 : MonoBehaviour
         if (phase == 8)
         {
             phase = -1;
-            GameManager.suddenly = true;
+            //GameManager.suddenly = true;
+            GameManager.stopWalking = true;
             six.gameObject.SetActive(false);
             five.gameObject.SetActive(false);
             suddenly.gameObject.SetActive(true);
