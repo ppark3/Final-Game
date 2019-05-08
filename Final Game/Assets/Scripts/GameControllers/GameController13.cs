@@ -177,16 +177,16 @@ public class GameController13 : MonoBehaviour
         }
         if (phase == 11)
         {
-            nine.gameObject.SetActive(true);
-        }
-        if (Input.GetKeyDown(KeyCode.Space) && phase == 11 && nine.GetComponent<ScrollText>().isTyping)
-        {
-            nine.GetComponent<ScrollText>().cancelTyping = true;
-        }
-        if (Input.GetKeyDown(KeyCode.Space) && phase == 11 && !nine.GetComponent<ScrollText>().isTyping)
-        {
-            GameManager.gameScene = 24;
-            SceneManager.LoadScene("Scene14");
+            if (GameManager.FriendDecision() >= 0)
+            {
+                GameManager.gameScene = 24;
+                SceneManager.LoadScene("Scene14");
+            }
+            else if (GameManager.FriendDecision() < 0)
+            {
+                GameManager.gameScene = -1;
+                SceneManager.LoadScene("Scene14Bad");
+            }
         }
         if (phase == 12)
         {

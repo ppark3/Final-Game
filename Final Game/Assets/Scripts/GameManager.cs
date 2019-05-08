@@ -27,11 +27,15 @@ public class GameManager : MonoBehaviour
     public static bool walkTowards = false;
     public static bool stopWalking = false;
     public static bool stab = false;
+    public static bool uglyAsFuck = false;
+    public static bool runningFootsteps = false;
+    public static bool slam = false;
 
     public static bool stopMusic = false;
     public static bool playSecondSong = false;
     public static bool playThirdSong = false;
     public static bool playGameOverSong = false;
+    public static bool playGameWonSong = false;
 
     // Start is called before the first frame update
     void Start()
@@ -123,5 +127,35 @@ public class GameManager : MonoBehaviour
         {
             gameScene = 25;
         }
+    }
+
+    public static int FriendDecision()
+    {
+        int decider = 0;
+        if (firstChoice == 1)
+        {
+            decider++;
+        }
+        else if (firstChoice == 2)
+        {
+            decider--;
+        }
+        if (secondChoice == 1)
+        {
+            decider++;
+        }
+        else if (secondChoice == 2)
+        {
+            decider--;
+        }
+        if (thirdChoice == 1)
+        {
+            decider++;
+        }
+        else if (thirdChoice == 2)
+        {
+            decider--;
+        }
+        return decider;
     }
 }

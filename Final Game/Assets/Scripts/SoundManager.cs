@@ -142,7 +142,7 @@ public class SoundManager : MonoBehaviour
             audioSource.Play();
             GameManager.walkTowards = false;
         }
-        if (GameManager.gameScene == 22 && GameManager.stopWalking)
+        if (GameManager.stopWalking)
         {
             audioSource.Stop();
             GameManager.stopWalking = false;
@@ -165,6 +165,27 @@ public class SoundManager : MonoBehaviour
             audioSource.clip = select;
             audioSource.Play();
             seventhChoice = false;
+        }
+        if (GameManager.uglyAsFuck)
+        {
+            audioSource.Stop();
+            audioSource.clip = gong;
+            audioSource.Play();
+            GameManager.uglyAsFuck = false;
+        }
+        if (GameManager.runningFootsteps)
+        {
+            audioSource.Stop();
+            audioSource.clip = fadeInRunning;
+            audioSource.Play();
+            GameManager.runningFootsteps = false;
+        }
+        if (GameManager.slam)
+        {
+            audioSource.Stop();
+            audioSource.clip = doorOpening;
+            audioSource.Play();
+            GameManager.slam = false;
         }
     }
 }

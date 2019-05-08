@@ -19,6 +19,7 @@ public class GameOver3 : MonoBehaviour
     public TMP_Text four;
     public TMP_Text five;
     public TMP_Text six;
+    public TMP_Text seven;
 
     // Start is called before the first frame update
     void Start()
@@ -58,6 +59,39 @@ public class GameOver3 : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && phase == 3 && four.GetComponent<ScrollText>().isTyping)
         {
             four.GetComponent<ScrollText>().cancelTyping = true;
+        }
+        if (Input.GetKeyDown(KeyCode.Space) && phase == 3 && !four.GetComponent<ScrollText>().isTyping)
+        {
+            phase = 4;
+        }
+        if (phase == 5 && Input.GetKeyDown(KeyCode.Space))
+        {
+            three.gameObject.SetActive(false);
+            four.gameObject.SetActive(false);
+            six.gameObject.SetActive(true);
+            phase = 6;
+        }
+        if (phase == 4 && Input.GetKeyDown(KeyCode.Space))
+        {
+            phase = 5;
+            //three.gameObject.SetActive(true);
+            GameManager.stab = true;
+            redBlanket.gameObject.SetActive(true);
+        }
+        if (Input.GetKeyDown(KeyCode.Space) && phase == 6 && six.GetComponent<FadeInText>().displayed)
+        {
+            phase = 7;
+        }
+        if (phase == 7)
+        {
+            gameOver.SetActive(true);
+            GameManager.playGameOverSong = true;
+            phase = 8;
+        }
+        if (phase == 8 && gameOver.GetComponent<SlowFadeIn>().fadedIn)
+        {
+            seven.gameObject.SetActive(true);
+            phase = 9;
         }
     }
 }

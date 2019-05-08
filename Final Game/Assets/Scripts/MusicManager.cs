@@ -69,6 +69,11 @@ public class MusicManager : MonoBehaviour
             StartCoroutine(GameOver(audioSource, 1f));
             GameManager.playGameOverSong = false;
         }
+        if (GameManager.playGameWonSong)
+        {
+            StartCoroutine(GameWon(audioSource, 1f));
+            GameManager.playGameWonSong = false;
+        }
     }
 
     public IEnumerator FadeOut(AudioSource audioSource, float FadeTime)
@@ -100,6 +105,24 @@ public class MusicManager : MonoBehaviour
         audioSource.Stop();
         audioSource.volume = start; 
         audioSource.clip = gameOver;
+        audioSource.Play();
+    }
+
+
+    public IEnumerator GameWon(AudioSource audioSource, float FadeTime)
+    {
+        float start = audioSource.volume;
+
+        while (audioSource.volume > 0)
+        {
+            audioSource.volume -= start * Time.deltaTime / FadeTime;
+
+            yield return null;
+        }
+
+        audioSource.Stop();
+        audioSource.volume = start;
+        audioSource.clip = gameWon;
         audioSource.Play();
     }
 }

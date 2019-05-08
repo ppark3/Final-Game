@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveTextRight : MonoBehaviour
+public class MoveTextLeft : MonoBehaviour
 {
     public float speed;
     public bool landed;
@@ -10,14 +10,14 @@ public class MoveTextRight : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = 6;
+        speed = 15;
         landed = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        gameObject.transform.Translate(Vector3.right * speed * Time.deltaTime);
+        gameObject.transform.Translate(Vector3.left * speed * Time.deltaTime);
     }
 
     void OnCollisionEnter2D()

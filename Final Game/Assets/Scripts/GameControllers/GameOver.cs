@@ -69,7 +69,7 @@ public class GameOver : MonoBehaviour
         if (phase == 3 && Input.GetKeyDown(KeyCode.Space))
         {
             phase = 4;
-            four.gameObject.SetActive(true);
+            //four.gameObject.SetActive(true);
             GameManager.stab = true;
             redBlanket.gameObject.SetActive(false);
             redBlanket.gameObject.SetActive(true);
@@ -81,7 +81,7 @@ public class GameOver : MonoBehaviour
         if (phase == 2 && Input.GetKeyDown(KeyCode.Space))
         {
             phase = 3;
-            three.gameObject.SetActive(true);
+            //three.gameObject.SetActive(true);
             GameManager.stab = true;
             redBlanket.gameObject.SetActive(true);
         }
