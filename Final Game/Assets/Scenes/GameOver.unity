@@ -11597,8 +11597,8 @@ MonoBehaviour:
   m_TextComponent: {fileID: 0}
   displayed: 0
   fadeTime: 0
-  fadeInColor: {r: 0.36862746, g: 0.05882353, b: 0.05882353, a: 1}
-  fadeOutColor: {r: 0.36862746, g: 0.05882353, b: 0.05882353, a: 0}
+  fadeInColor: {r: 0.54901963, g: 0.20784314, b: 0.20784314, a: 1}
+  fadeOutColor: {r: 0.54901963, g: 0.20784314, b: 0.20784314, a: 0}
 --- !u!114 &1976991296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11630,7 +11630,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4279111261
-  m_fontColor: {r: 0.3679245, g: 0.057271272, b: 0.057271272, a: 1}
+  m_fontColor: {r: 0.54901963, g: 0.20784314, b: 0.20784314, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

@@ -40,7 +40,19 @@ public class Begin : MonoBehaviour
 
         audioSource.clip = introSong;
         audioSource.Play();
-    }
+
+        Destroy(GameObject.Find("SoundManager"));
+        Destroy(GameObject.Find("MusicManager"));
+        Destroy(GameObject.Find("GameManager"));
+
+        GameManager.firstChoice = 0;
+        GameManager.secondChoice = 0;
+        GameManager.thirdChoice = 0;
+        GameManager.fourthChoice = 0;
+        GameManager.fifthChoice = 0;
+        GameManager.sixthChoice = 0;
+        GameManager.seventhChoice = 0;
+}
 
     // Update is called once per frame
     void Update()

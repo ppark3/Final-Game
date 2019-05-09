@@ -38,12 +38,12 @@ public class MusicManager : MonoBehaviour
             if (GameManager.gameScene == 14)
             {
                 GameManager.stopMusic = false;
-                stopMusic = StartCoroutine(FadeOut(audioSource, 0.1f));
+                stopMusic = StartCoroutine(FadeOut(audioSource, 0.5f));
             }
             else if (GameManager.gameScene == 22)
             {
                 GameManager.stopMusic = false;
-                stopMusic2 = StartCoroutine(FadeOut(audioSource, 0.1f));
+                stopMusic2 = StartCoroutine(FadeOut(audioSource, 0.5f));
             }
         }
         if (GameManager.playSecondSong)

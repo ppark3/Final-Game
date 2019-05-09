@@ -10762,7 +10762,7 @@ MonoBehaviour:
 
     pulls
 
-    out<#960000>
+    out<#8C3535>
 
     a
 
@@ -10856,11 +10856,11 @@ MonoBehaviour:
     lineCount: 12
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -16297,7 +16297,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4281677195
-  m_fontColor: {r: 0.6698113, g: 0.08530616, b: 0.08530616, a: 1}
+  m_fontColor: {r: 0.54901963, g: 0.20784314, b: 0.20784314, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -16529,7 +16529,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4279111261
-  m_fontColor: {r: 0.67058825, g: 0.08627451, b: 0.08627451, a: 0}
+  m_fontColor: {r: 0.65882355, g: 0.43137255, b: 0.43137255, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -16629,8 +16629,8 @@ MonoBehaviour:
   m_TextComponent: {fileID: 0}
   displayed: 0
   fadeTime: 0
-  fadeInColor: {r: 0.67058825, g: 0.08627451, b: 0.08627451, a: 1}
-  fadeOutColor: {r: 0.67058825, g: 0.08627451, b: 0.08627451, a: 0}
+  fadeInColor: {r: 0.65882355, g: 0.43137255, b: 0.43137255, a: 1}
+  fadeOutColor: {r: 0.65882355, g: 0.43137255, b: 0.43137255, a: 0}
 --- !u!222 &2102807885
 CanvasRenderer:
   m_ObjectHideFlags: 0

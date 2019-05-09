@@ -57,6 +57,7 @@ public class GameOver : MonoBehaviour
         if (phase == 5 && Input.GetKeyDown(KeyCode.Space))
         {
             StartCoroutine(BloodSplatter());
+            phase = -1;
         }
         if (phase == 4 && Input.GetKeyDown(KeyCode.Space))
         {
