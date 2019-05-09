@@ -115,13 +115,16 @@ public class GameOver : MonoBehaviour
         if (phase == 10 && gameOver.GetComponent<SlowFadeIn>().fadedIn)
         {
             eight.gameObject.SetActive(true);
-            nine.gameObject.SetActive(true);
             phase = 11;
         }
         if (phase == 11 && Input.GetKeyDown(KeyCode.R))
         {
             GameManager.gameScene = 0;
             SceneManager.LoadScene("Title Screen");
+        }
+        if (eight.GetComponent<SlowScroll>().displayed)
+        {
+            nine.gameObject.SetActive(true);
         }
     }
 

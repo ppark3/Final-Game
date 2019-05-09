@@ -46,6 +46,11 @@ public class MusicManager : MonoBehaviour
                 stopMusic2 = StartCoroutine(FadeOut(audioSource, 0.5f));
             }
         }
+        if (GameManager.stopMusicAbruptly)
+        {
+            audioSource.Stop();
+            GameManager.stopMusicAbruptly = false;
+        }
         if (GameManager.playSecondSong)
         {
             StopCoroutine(stopMusic);

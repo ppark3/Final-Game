@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     public static bool slam = false;
 
     public static bool stopMusic = false;
+    public static bool stopMusicAbruptly = false;
     public static bool playSecondSong = false;
     public static bool playThirdSong = false;
     public static bool playGameOverSong = false;

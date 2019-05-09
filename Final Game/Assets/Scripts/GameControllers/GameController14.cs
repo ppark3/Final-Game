@@ -376,8 +376,12 @@ public class GameController14 : MonoBehaviour
         if (phase == 31 && gameWon.GetComponent<SlowFadeIn>().fadedIn)
         {
             twentyeight.gameObject.SetActive(true);
-            twentynine.gameObject.SetActive(true);
             phase = 32;
+        }
+
+        if (twentyeight.GetComponent<SlowScroll>().displayed)
+        {
+            twentynine.gameObject.SetActive(true);
         }
 
         if (phase == 32 && Input.GetKeyDown(KeyCode.R))

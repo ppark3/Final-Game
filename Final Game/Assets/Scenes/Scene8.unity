@@ -1666,7 +1666,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'It becomes unbelievably cold. '
+  m_text: 'It becomes unbelievably <#2B50FF>cold. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 02792a24a87984214bcdf32359ab4167, type: 2}
   m_sharedMaterial: {fileID: 21638925138401192, guid: 02792a24a87984214bcdf32359ab4167,

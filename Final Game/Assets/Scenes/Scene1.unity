@@ -165,7 +165,7 @@ MonoBehaviour:
   m_TextComponent: {fileID: 0}
   displayed: 0
   fadeTime: 0
-  fadeInColor: {r: 1, g: 1, b: 1, a: 1}
+  fadeInColor: {r: 0.5764706, g: 0.5764706, b: 0.5764706, a: 1}
   fadeOutColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!114 &60602546
 MonoBehaviour:
@@ -187,7 +187,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: darkness
+  m_text: darkness.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 02792a24a87984214bcdf32359ab4167, type: 2}
   m_sharedMaterial: {fileID: 21638925138401192, guid: 02792a24a87984214bcdf32359ab4167,
@@ -265,11 +265,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -523,7 +523,7 @@ MonoBehaviour:
   m_TextComponent: {fileID: 0}
   displayed: 0
   fadeTime: 0
-  fadeInColor: {r: 1, g: 1, b: 1, a: 1}
+  fadeInColor: {r: 1, g: 0.8862745, b: 0.24313726, a: 1}
   fadeOutColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!114 &384924839
 MonoBehaviour:
@@ -545,7 +545,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: ONE FLASHLIGHT
+  m_text: ONE FLASHLIGHT.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 02792a24a87984214bcdf32359ab4167, type: 2}
   m_sharedMaterial: {fileID: 21638925138401192, guid: 02792a24a87984214bcdf32359ab4167,
@@ -623,11 +623,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -702,7 +702,7 @@ MonoBehaviour:
   m_TextComponent: {fileID: 0}
   displayed: 0
   fadeTime: 0
-  fadeInColor: {r: 1, g: 1, b: 1, a: 1}
+  fadeInColor: {r: 0.5764706, g: 0.5764706, b: 0.5764706, a: 1}
   fadeOutColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!114 &612036808
 MonoBehaviour:
@@ -882,7 +882,7 @@ MonoBehaviour:
   m_TextComponent: {fileID: 0}
   displayed: 0
   fadeTime: 0
-  fadeInColor: {r: 1, g: 1, b: 1, a: 1}
+  fadeInColor: {r: 0.7169812, g: 0.6387327, b: 0.18600929, a: 1}
   fadeOutColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!114 &686499231
 MonoBehaviour:
@@ -906,7 +906,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 'YOU LOST
 
-    YOUR FLASHLIGHT'
+    YOUR FLASHLIGHT.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 02792a24a87984214bcdf32359ab4167, type: 2}
   m_sharedMaterial: {fileID: 21638925138401192, guid: 02792a24a87984214bcdf32359ab4167,
@@ -916,7 +916,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
+    rgba: 4281377719
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -984,11 +984,11 @@ MonoBehaviour:
     lineCount: 2
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -1063,6 +1063,7 @@ MonoBehaviour:
   gameOver: {fileID: 8300000, guid: 569226403b0014dbe98a260434ee3f42, type: 3}
   gameWon: {fileID: 8300000, guid: f7f7bba564c1b4eecbf3b65a4c57f363, type: 3}
   audioSource: {fileID: 693996385}
+  startVolume: 0
 --- !u!82 &693996385
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2102,6 +2103,11 @@ MonoBehaviour:
   gong: {fileID: 8300000, guid: 882ca5066274041118477927aa85c9e0, type: 3}
   firstChoice: 1
   secondChoice: 1
+  thirdChoice: 1
+  fourthChoice: 1
+  fifthChoice: 1
+  sixthChoice: 1
+  seventhChoice: 1
   audioSource: {fileID: 2013377877}
 --- !u!82 &2013377877
 AudioSource:

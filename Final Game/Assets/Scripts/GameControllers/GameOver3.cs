@@ -92,8 +92,12 @@ public class GameOver3 : MonoBehaviour
         if (phase == 8 && gameOver.GetComponent<SlowFadeIn>().fadedIn)
         {
             seven.gameObject.SetActive(true);
-            eight.gameObject.SetActive(true);
             phase = 9;
+        }
+
+        if (seven.GetComponent<SlowScroll>().displayed)
+        {
+            eight.gameObject.SetActive(true);
         }
 
         if (phase == 9 && Input.GetKeyDown(KeyCode.R))

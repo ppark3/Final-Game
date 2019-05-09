@@ -197,7 +197,7 @@ public class GameController12 : MonoBehaviour
                 runResponse3.SetActive(false);
                 cursor.SetActive(false);
                 decisionTime = false;
-                GameManager.stopMusic = true;
+                GameManager.stopMusicAbruptly = true;
                 triedRunning = true;
                 eight.gameObject.SetActive(true);
                 phase = -10;
