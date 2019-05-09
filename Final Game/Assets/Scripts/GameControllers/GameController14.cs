@@ -43,6 +43,7 @@ public class GameController14 : MonoBehaviour
     public TMP_Text twentysix;
     public TMP_Text twentyseven;
     public TMP_Text twentyeight;
+    public TMP_Text twentynine;
 
     public GameObject hey;
 
@@ -375,7 +376,14 @@ public class GameController14 : MonoBehaviour
         if (phase == 31 && gameWon.GetComponent<SlowFadeIn>().fadedIn)
         {
             twentyeight.gameObject.SetActive(true);
+            twentynine.gameObject.SetActive(true);
             phase = 32;
+        }
+
+        if (phase == 32 && Input.GetKeyDown(KeyCode.R))
+        {
+            GameManager.gameScene = 0;
+            SceneManager.LoadScene("Title Screen");
         }
     }
 

@@ -20,6 +20,7 @@ public class GameOver3 : MonoBehaviour
     public TMP_Text five;
     public TMP_Text six;
     public TMP_Text seven;
+    public TMP_Text eight;
 
     // Start is called before the first frame update
     void Start()
@@ -91,7 +92,14 @@ public class GameOver3 : MonoBehaviour
         if (phase == 8 && gameOver.GetComponent<SlowFadeIn>().fadedIn)
         {
             seven.gameObject.SetActive(true);
+            eight.gameObject.SetActive(true);
             phase = 9;
+        }
+
+        if (phase == 9 && Input.GetKeyDown(KeyCode.R))
+        {
+            GameManager.gameScene = 0;
+            SceneManager.LoadScene("Title Screen");
         }
     }
 }
